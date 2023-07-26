@@ -19,3 +19,5 @@
 ## [hw03-mongodb](hw03-mongodb.md)
 
 ## [hw04-auth](hw04-auth.md)
+
+## [hw05-avatars](hw05-avatars.md)
