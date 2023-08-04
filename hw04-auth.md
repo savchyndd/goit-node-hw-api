@@ -253,6 +253,6 @@ ResponseBody: {
 
 ---
 
-<!-- > **[Next hw03-mongodb](hw03-mongodb.md)** -->
+> **[Next hw05-avatars](hw05-avatars.md)**
 
 > **[Readme](readme.md)**
