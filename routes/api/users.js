@@ -17,6 +17,14 @@ router.post("/logout", authenticate, ctrl.logout);
 
 router.get("/current", authenticate, ctrl.getCurrent);
 
+router.get("/verify/:verificationToken", ctrl.verifyEmail);
+
+router.post(
+  "/verify",
+  validateBody(userSchemas.emailSchema),
+  ctrl.resendVerifyEmail
+);
+
 router.patch(
   "/",
   authenticate,
