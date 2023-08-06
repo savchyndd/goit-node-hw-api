@@ -21,3 +21,5 @@
 ## [hw04-auth](hw04-auth.md)
 
 ## [hw05-avatars](hw05-avatars.md)
+
+## [hw06-email](hw06-email.md)

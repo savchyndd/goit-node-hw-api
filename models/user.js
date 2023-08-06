@@ -32,6 +32,14 @@ const userSchema = new Schema(
     },
     avatarURL: String,
     token: String,
+    verify: {
+      type: Boolean,
+      default: false,
+    },
+    verificationToken: {
+      type: String,
+      required: [true, "Verify token is required"],
+    },
   },
   { versionKey: false, timestamps: true }
 );
@@ -66,10 +74,18 @@ const updSubscriptionSchema = Joi.object({
   subscription: Joi.string().required(),
 });
 
+const emailSchema = Joi.object({
+  email: Joi.string().pattern(EMAIL_REGEX).required().messages({
+    "string.pattern.base":
+      "Email may contain letters, numbers, an apostrophe, and must be followed by '@' domain name '.' domain suffix. For example Taras@ukr.ua, adrian@gmail.com, JacobM3rcer@hotmail.com",
+  }),
+});
+
 const userSchemas = {
   registerSchema,
   loginSchema,
   updSubscriptionSchema,
+  emailSchema,
 };
 
 module.exports = { User, userSchemas };
